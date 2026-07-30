@@ -1,20 +1,35 @@
 import streamlit as st
 from PIL import Image
 import pandas as pd
+st.set_page_config(layout="wide")
 
-#変数
-t_high = 390 #表の高さ
+
+
 
 #ダミーデータ作成
 #指の長さ
-Lfore1_2 = 20 #人差し指第一～第二の長さ
-Lfore2_3 = 0 #人差し指第二～第三の長さ
-Lfore3_t = 1 #人差し指第三～指先の長さ
+Lfore1_2 = 0 #人差し指第一～第二の長さ
+Lfore2_3 = 1 #人差し指第二～第三の長さ
+Lfore3_t = 2 #人差し指第三～指先の長さ
+
+Lmiddle1_2 = 3 #中指第一～第二の長さ
+Lthird1_2 = 4 #薬指第一～第二の長さ
+Llittle1_2 = 5 #小指第一～第二の長さ
+Lthumb1_2 = 6 #親指第一～第二の長さ
+
+Lmiddle_wrist =7 #中指付け根～手首の長さ
+Lthumb_wrist = 8 #親指付け根から手首の長さ
+Llittle_fore = 9 #小指付け根～人差し指付け根の長さ
 
 #指の角度
-Afore1_2 = 30 #人差し指第一～第二の角度
-Afore2_3 = 40 #人差し指第二～第三の角度
-Afore3_t = 50 #人差し指第三～指先の角度
+Afore1_2 = 00 #人差し指第一～第二の角度
+Afore2_3 = 10 #人差し指第二～第三の角度
+Afore3_t = 20 #人差し指第三～指先の角度
+
+Amiddle1_2 = 30
+Athird1_2 = 40
+Alittle1_2= 50
+Athumb1_2 = 60
 
 #コメント
 part_1 = "親指"
@@ -61,23 +76,23 @@ df = pd.DataFrame({
              '薬指','第一～第二関節','第二～第三関節','第三関節～指先',
              '小指','第一～第二関節','第二～第三関節','第三関節～指先',
              '親指','第一～第二関節','第二関節～指先',
-             'その他','中指付け根～手首','中指付け根～手首','小指～人差し指付け根'],
+             'その他','中指付け根～手首','親指付け根～手首','小指～人差し指付け根'],
     '長さ': ['', Lfore1_2, Lfore2_3, Lfore3_t, #一つ目は空欄
-            '','','','',
-            '','','','',
-            '','','','',
-            '','','',
-            '','','','',],
+            '',Lmiddle1_2, '','',
+            '',Lthird1_2, '','',
+            '',Llittle1_2, '','',
+            '',Lthumb1_2, '',
+            '',Lmiddle_wrist, Lthumb_wrist, Llittle_fore,],
     '角度': ['', Afore1_2, Afore2_3, Afore3_t, #一つ目は空欄
-            '','','','',
-            '','','','',
-            '','','','',
+            '',Amiddle1_2, '','',
+            '',Athird1_2, '','',
+            '',Alittle1_2, '','',
             '','','',
             '','','','',]
 })
 
 #表のサイドバー表示
-st.sidebar.dataframe(df, height=t_high)
+st.sidebar.dataframe(df, height="stretch")
 
 #ファイル保存ボタン表示
 if st.sidebar.button("ファイルを保存"):

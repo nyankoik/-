@@ -12,3 +12,5 @@
 
 角度：angle
 長さ：lengh
+
+保存：save

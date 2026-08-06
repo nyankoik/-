@@ -1,0 +1,14 @@
+人差し指：fore_finger
+中指：middle_finger
+薬指：third_finger
+小指：little_finger
+親指：thumb
+
+手首：wrist
+手の平：palm
+関節：joint
+指先：finger_tip
+付け根：root
+
+角度：angle
+長さ：lengh

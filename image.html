@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>タイトル</title>
+<link href="style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <script src="js.js"></script>
+
+<article>
+  <div class="side">
+    <p>サイドバー</p>
+        <div class="table_box">
+<table>
+  <tr>
+  <th class="sticky">部位</th>
+  <th class="sticky">長さ</th>
+  <th class="sticky">角度</th>
+  </tr>
+  <tr>
+  <td>テキスト</td>
+  <td>テキスト</td>
+  <td>テキスト</td>
+  </tr>
+  <tr>
+  <td>テキスト</td>
+  <td>テキスト</td>
+  <td>テキスト</td>
+  </tr>
+  <tr>
+  <td>テキスト</td>
+  <td>テキスト</td>
+  <td>テキスト</td>
+  </tr>
+  <tr>
+  <td>テキスト</td>
+  <td>テキスト</td>
+  <td>テキスト</td>
+  </tr>
+  <tr>
+  <td>テキスト</td>
+  <td>テキスト</td>
+  <td>テキスト</td>
+  </tr>
+  <tr>
+  <td>テキスト</td>
+  <td>テキスト</td>
+  <td>テキスト</td>
+  </tr>
+  <tr>
+  <td>テキスト</td>
+  <td>テキスト</td>
+  <td>テキスト</td>
+  </tr>
+  <tr>
+  <td>テキスト</td>
+  <td>テキスト</td>
+  <td>テキスト</td>
+  </tr>
+  <tr>
+  <td>テキスト</td>
+  <td>テキスト</td>
+  <td>テキスト</td>
+  </tr>
+</table>
+</div>
+  </div> 
+  <div class="content">
+    <p>メインコンテンツ</p>
+    <div class = "images">
+    <!-- 正面分 -->
+    <!-- 画像ファイルを選択するための入力要素を設定します。
+         accept属性により、ファイル選択ダイアログで画像ファイルのみが表示されます。
+         multiple属性により、ユーザーが複数のファイルを選択できます。
+         onchange属性により、選択したファイルが変更されるたびに指定したJavaScript関数が呼び出されます。 -->
+    <input type="file" accept='image/*' multiple="multiple" onchange="preview_f(this);">
+
+    <!-- 選択した画像のプレビューを表示するためのdiv要素を設定します。 -->
+    <div id="img_f"></div>
+
+    <!-- 左手分 -->
+    <input type="file" accept='image/*' multiple="multiple" onchange="preview_l(this);">
+
+    <!-- 選択した画像のプレビューを表示するためのdiv要素を設定します。 -->
+    <div id="img_l"></div>
+    </div>
+
+  </div>
+</article>
+
+
+</body>
+</html>

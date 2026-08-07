@@ -1,0 +1,115 @@
+
+
+
+/* メインコンテンツ */
+.content {
+  background-color:#b3d874;
+  width:79%;
+  height:75vh;
+  text-align:center;
+
+}
+
+/* サイドバー */
+.side {
+  background-color:#ffffff;
+  width:20%;
+  height:75vh;
+  text-align:center;
+  margin-left:1%;
+  display:flex;
+  flex-direction: column;
+}
+
+.content_and_side {
+  display:flex;/*サイドバーとメインコンテンツを横並びにする                指定をした*/
+}
+
+.button_box{
+  display: flex;
+  gap: 1rem;    /* ボタン同士の間隔 */
+  width: 100%;
+}
+
+.select_b,
+.save_b{
+  flex: 1;       /* 横幅を半分ずつ */
+  margin-bottom: 3%;
+  line-height: 2;
+}
+
+.feedback_b{
+  width: 100%;
+  line-height: 2;
+}
+
+/* 表 */
+.table_box{
+  overflow-y: auto;
+  width:100%;
+  flex:1;
+  /* height: 80vh; */
+  -webkit-overflow-scrolling: touch;
+  margin-top:3%;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+}
+th, td {
+  vertical-align: middle;
+  padding: 10px;
+  border: 1px solid #000;
+  color: #000;
+  font-size: 14px;
+  text-align: center;
+  white-space: nowrap;
+}
+th {
+  background: #000;
+}
+td {
+  background: #fff;
+}
+.sticky {
+  position: sticky;
+  top: 0;
+  left: 0;
+  border-top: none;
+}
+.sticky::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+  background: #ccc;
+  z-index: -1;
+}
+
+.empty{
+  background:#ccc;
+}
+
+/* ----- */
+
+.comments{
+  background-color:#ffffff;
+  width:100%;
+  height:20vh;
+  box-sizing:border-box;
+  text-align:left;
+  padding-top:0.05%;
+  padding-left:2%;
+  margin-top:1%;
+  border: 3px solid #000;   /* 枠線を追加 */
+}
+
+/* 画像 */
+.images{
+  display:flex;
+}

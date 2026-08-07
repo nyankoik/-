@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>課題研究</title>
+<link href="image.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <script src="image.js"></script>
+
+<article>
+  <div class="content_and_side">
+    <div class="content">
+    <!-- <p>メインコンテンツ</p> -->
+      <div class = "images">
+
+
+        <div class = "side_hand">
+    <!-- 側面 -->
+    <input type="file" accept='image/*' onchange="preview_s(this);">
+
+    <!-- 選択した画像のプレビューを表示するためのdiv要素を設定します。 -->
+    <img id="img_s" alt="左手" width="30" height="200">
+        </div><!--class side_hand-->
+
+
+        <div class = "front_hand">
+        <!-- 正面 -->
+        <!-- 画像ファイルを選択するための入力要素を設定します。
+            accept属性により、ファイル選択ダイアログで画像ファイルのみが表示されます。
+            multiple属性により、ユーザーが複数のファイルを選択できます。
+            onchange属性により、選択したファイルが変更されるたびに指定したJavaScript関数が呼び出されます。 -->
+        <input type="file" accept='image/*' onchange="preview_f(this);">
+    
+        <!-- 選択した画像のプレビューを表示するためのdiv要素を設定します。 -->
+        <img id="img_f" alt = "正面"></img>
+        </div> <!--class front_hand-->
+
+
+      </div> <!--class images-->
+    </div> <!--class content-->
+
+
+  <div class="side">
+    <!-- <p>サイドバー</p> -->
+    <div class="button_box">
+      <button class="select_b" type="button">モデル選択</button>
+      <button class="save_b" type="button">保存</button>
+    </div>
+    <button class="feedback_b" type="button">フィードバック開始</button>
+        <div class="table_box">
+<table>
+  <tr>
+  <th class="sticky">部位</th>
+  <th class="sticky">長さ</th>
+  <th class="sticky">角度</th>
+  </tr>
+  <tr>
+    <td>人差し指</td>
+  <td class="empty"></td>
+  <td class="empty"></td>
+  </tr>
+  <tr>
+<td>第一～第二関節</td>
+  <td>テキスト</td>
+  <td>テキスト</td>
+  </tr>
+  <tr>
+  <td>第二～第三関節</td>
+  <td>テキスト</td>
+  <td>テキスト</td>
+  </tr>
+  <tr>
+  <td>第三関節～指先</td>
+  <td>テキスト</td>
+  <td>テキスト</td>
+  </tr>
+  <tr>
+    <td>中指</td>
+  <td class="empty"></td>
+  <td class="empty"></td>
+  </tr>
+  <tr>
+  <td>第一～第二関節</td>
+  <td>テキスト</td>
+  <td>テキスト</td>
+  </tr>
+  <tr>
+  <td>第二～第三関節</td>
+  <td>テキスト</td>
+  <td>テキスト</td>
+  </tr>
+  <tr>
+  <td>第三関節～指先</td>
+  <td>テキスト</td>
+  <td>テキスト</td>
+  </tr>
+    <td>薬指</td>
+  <td class="empty"></td>
+  <td class="empty"></td>
+  </tr>
+  <tr>
+  <td>第一～第二関節</td>
+  <td>テキスト</td>
+  <td>テキスト</td>
+  </tr>
+  <tr>
+  <td>第二～第三関節</td>
+  <td>テキスト</td>
+  <td>テキスト</td>
+  </tr>
+  <tr>
+  <td>第三関節～指先</td>
+  <td>テキスト</td>
+  <td>テキスト</td>
+  </tr>
+    <td>小指</td>
+  <td class="empty"></td>
+  <td class="empty"></td>
+  </tr>
+  <tr>
+  <td>第一～第二関節</td>
+  <td>テキスト</td>
+  <td>テキスト</td>
+  </tr>
+  <tr>
+  <td>第二～第三関節</td>
+  <td>テキスト</td>
+  <td>テキスト</td>
+  </tr>
+  <tr>
+  <td>第三関節～指先</td>
+  <td>テキスト</td>
+  <td>テキスト</td>
+  </tr>
+    <td>親指</td>
+  <td class="empty"></td>
+  <td class="empty"></td>
+  </tr>
+  <tr>
+  <td>第一～第二関節</td>
+  <td>テキスト</td>
+  <td>テキスト</td>
+  </tr>
+  <tr>
+  <td>第二～第三関節</td>
+  <td>テキスト</td>
+  <td>テキスト</td>
+  </tr>
+  <td>その他</td>
+  <td class="empty"></td>
+  <td class="empty"></td>
+  </tr>
+  <tr>
+  <td>中指付け根～手首</td>
+  <td>テキスト</td>
+  <td>テキスト</td>
+  </tr>
+  <tr>
+  <td>親指付け根～手首</td>
+  <td>テキスト</td>
+  <td>テキスト</td>
+  </tr>
+  <tr>
+  <td>小指～人差し指</td>
+  <td>テキスト</td>
+  <td>テキスト</td>
+  </tr>
+</table>
+</div><!--class table_box-->
+  </div> <!--class side-->
+  </div><!--class content_and_side-->
+  
+  <div class="comments">
+    <h1>コメント</h1>
+    <p>これはテストコメントです</p>
+    <p>それではご覧ください！それではご覧ください！それではご覧ください！それではご覧ください！それではご覧ください！それではご覧ください！</p>
+    <p>吾輩は猫である</p>
+  </div>
+
+</article>
+
+
+</body>
+</html>

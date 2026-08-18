@@ -1,0 +1,10 @@
+#chart-container_2 {
+  width: 50vw;
+  height: 400px;
+  background-color:#aaff00;
+}
+
+#myDraggableScatterChart {
+  width: 100% !important;
+  height: 100% !important;
+}

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>課題研究</title>
+
+<link href="image.css" rel="stylesheet" type="text/css">
+<link href="graph.css" rel="stylesheet" type="text/css">
+
+<!-- Chart.js 本体 (v4対応) -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<!-- chartjs-plugin-dragdata プラグイン -->
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-dragdata@latest/dist/chartjs-plugin-dragdata.min.js"></script>
+
+</head>
+<body>
+    
+    <div class="content">
+    <!-- 画像アップロード＆表示部分 -->
+    <div id="side_c" style="flex-direction: column;">
+        <input type="file" id="side_up" accept="image/*" style="display: none;">
+        <button type="button" id="side_b">参照</button>
+        <canvas id="side_img" class="hand_img" style="background-color: gray;"></canvas>
+      </div>
+
+      <div id="front_c">
+        <input type="file" id="front_up" accept="image/*" style="display: none;">
+        <button type="button" id="front_b">参照</button>
+        <canvas id="front_img" class="hand_img" style="background-color: gray;"></canvas>
+      </div>
+
+    
+    </div> <!--class content-->
+
+    <!-- ボタン表示 -->
+    <div class="button_box">
+      <button id="save_b" type="button">保存</button>
+      <button id="feed_b" type="button">フィードバック開始</button>
+      <button id="rev_b" type="button">左右反転</button>
+      <button id="select_b" type="button">モデル選択</button>
+    
+    </div>
+
+    <!-- 表 -->
+  <!-- 左側 -->
+    <div class="table_box">
+  <table class="table_l">
+  <tr>
+  <th class="sticky">部位</th>
+  <th class="sticky">長さ</th>
+  <th class="sticky">基準</th>
+  </tr>
+
+  <tbody class='coord_table_l'>
+  </tbody>
+  
+  </table>
+
+  <!-- 中央 -->
+  <table class="table_c">
+  <tr>
+  <th class="sticky">部位</th>
+  <th class="sticky">長さ</th>
+  <th class="sticky">基準</th>
+  </tr>
+
+  <tbody class='coord_table_c'>
+  </tbody>
+
+  </table>
+
+  <!-- 右 -->
+<table class="table_r">
+  <tr>
+  <th class="sticky">部位</th>
+  <th class="sticky">長さ</th>
+  <th class="sticky">基準</th>
+  </tr>
+
+  <tbody class='coord_table_r'>
+  </tbody>
+
+  </table>
+
+    </div><!--class table_box-->
+  
+  <!-- コメント部分 -->
+  <div class="comments">
+    <h1>コメント</h1>
+    <p>これはテストコメントです</p>
+    <p>これもテストコメントです</p>
+    <p>吾輩は猫である</p>
+  </div>
+
+  <script src="image.js"></script> <!--画像アップロード-->
+  <script src="graph.js"></script> <!--グラフ作成・長さ計算-->
+  <!-- <script src="graph_front.js"></script> -->
+  <script src="table.js"></script> <!--表作成-->
+
+</body>
+</html>

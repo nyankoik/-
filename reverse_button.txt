@@ -1,0 +1,6 @@
+const  rev_click= document.getElementById("rev_b");
+rev_click.addEventListener('click', () => {
+  myChart.data.datasets[finger.fore].data[joint.tip].x = (myChart.data.datasets[finger.fore].data[joint.tip].x) * -1
+  myChart.update('none');
+  console.log(myChart.data.datasets[finger.fore].data[joint.tip].x)
+})

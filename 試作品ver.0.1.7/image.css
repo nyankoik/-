@@ -1,0 +1,381 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+    background-color: #b3d874;
+}
+
+/* メインコンテンツ */
+.content {
+  /* background-color: #b3d874; */
+  width: 95%;
+  /* height: 100%; */
+  min-height: 45vw;
+  display: flex;
+  justify-content: center;
+  gap: 3vw;
+  padding: 20px;
+}
+
+#side_c, #front_c {
+  width: 45%;
+  padding: 0px;
+  gap: 10px;
+  display: flex;
+  flex-direction: column; /* 子要素を縦に並べる */
+  align-items: flex-start; /* 左寄せにする場合 */
+}
+
+#side_b, #front_b {
+  width: 5rem;
+  height: 2rem;
+  flex-shrink: 0;
+}
+
+#side_rev_c,#front_rev_c{
+  display: flex;
+  gap: 8%;
+}
+
+#side_rev,#front_rev{
+  width: 7rem;
+  height: 2rem;
+  flex-shrink: 0;
+}
+
+
+.chart_c {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  position: relative; /* Chart.jsのレスポンシブ崩れ防止 */
+}
+
+.hand_img, 
+.chart_c canvas {
+  width: 100% ;
+  height: 100% ;
+  border: 6px solid #000;
+  background-color: #dddddd;
+}
+
+.hand_img {
+  width: 100%;
+  aspect-ratio: 1/1;
+  border: 6px solid #000;
+  /* background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat; */
+  align-self: flex-start;
+}
+
+
+.button_box {
+    direction: rtl; /*右寄せにする*/
+    padding: 1vh;
+    /* background: #fff9cc; */
+    display: flex;
+}
+
+/* #help_b{
+  direction: rtl;
+} */
+
+#side_b, #front_b, #side_rev, #front_rev, #save_b, #feed_b, #select_b, #help_b{
+  /* display: inline-block; ボタンを横並びにする */
+  border: none; /* 枠線をなくす */
+  /* border-radius: 5px; 角丸をつける */
+  padding: 10px 15px; /* ボタンの内側の余白 */
+  /* margin: 5px; ボタン同士の余白 */
+  background-color: #1D5533; /* ボタンの背景色 */
+  color: #FFFFFF; /* ボタンの文字色 */
+  display: flex;             /* フレックスボックスを使用 */
+  justify-content: center;   /* 横方向（左右）の中央寄せ */
+  align-items: center;  /* 横方向（左右）の中央寄せ */
+  text-decoration: none; /* テキストに下線をつけない */
+  font-size: 15px; /* テキストのフォントサイズ */
+  cursor: pointer; /* マウスポインタを変更する */
+}
+
+/* 三つのボタンの幅をそろえる */
+#save_b, #feed_b, #select_b {
+  /* width: 15%; */
+  width: 15rem;
+  height: 2rem;
+  margin-left: 1rem;
+}
+
+/* タブの装飾 */
+.tab_bs {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .tab_b {
+        flex-basis: 33%;
+        text-align: center;
+
+    }
+    .tab_b a {
+        display: block;
+        position: relative;
+        font-size: 16px;
+        padding: 16px;
+        text-decoration: none;
+        line-height: 1.2;
+        background-color: #74A159;
+        cursor: pointer;
+        color:#171f1a;
+        border-radius: 8px 8px 0 0;
+
+    }
+    .tab_b a.is-active {
+        background-color: #1D5533;
+        color: #ffffff;
+    }
+
+    .tab_item {
+        display: none;
+        width: 100%;
+        height: 100%;
+        justify-content: center;
+    }
+    .tab_item.is-active {
+        display: flex;
+        background-color: #1D5533;
+    }
+
+/* 表 */
+.table_box {
+  overflow-y: auto;
+  width: 90%;
+  /* height: 10vw; */
+  margin-top:2%;
+  margin-bottom:2%;
+  -webkit-overflow-scrolling: touch;
+  display: flex;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+}
+
+th, td {
+  vertical-align: middle;
+  padding: 10px;
+  border: 1px solid #000;
+  color: #000;
+  font-size: 14px;
+  text-align: center;
+  white-space: nowrap;
+}
+
+th {
+  background: #000;
+}
+
+td {
+  background: #fff;
+}
+
+td:not(.empty):hover {
+  background: #f5f5f5;
+}
+
+.sticky {
+  position: sticky;
+  top: 0;
+  left: 0;
+  border-top: none;
+}
+
+.sticky::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+  background: #ccc;
+  z-index: -1;
+}
+
+/* 空部分の色の指定 */
+.empty {
+  background: #ccc;
+}
+
+/* コメント部 */
+.comments {
+  background-color: #ffffff;
+  width: 100%;
+  box-sizing: border-box;
+  text-align: left;
+  padding-top: 0.05%;
+  padding-left: 2%;
+  margin-top: 1%;
+  border: 3px solid #000;   /* 枠線を追加 */
+}
+
+.hand_3D_c {
+  width: 100%;
+  aspect-ratio: 2 / 1;
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  flex-direction: row; /* 子要素を横に並べる */
+  position: relative; /* Chart.jsのレスポンシブ崩れ防止 */  
+  margin-top: 2%;
+  padding-top: 2%;
+  gap: 2.5%;
+  /* background-color:gray; */
+}
+
+#handCanvas1,#handCanvas2 {
+  width: 45%;
+  aspect-ratio: 1 / 1;
+  border: 6px solid #000;
+  background-color: gray;
+}
+
+.clr_rev{
+  direction: rtl; /*右寄せにする*/
+}
+
+#chart_cont {
+  position: relative;
+  width: 60%;
+  max-width: 600px;
+  height: 600px;
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+}
+
+/* 
+
+#coordinate_list {
+  margin-top: 20px;
+}
+
+#coord_table {
+  border-collapse: collapse;
+  width: 500px;
+}
+
+#coord_table th,
+#coord_table td {
+  border: 1px solid #999;
+  padding: 8px 12px;
+  text-align: center;
+}
+
+#coord_table th {
+  background-color: #eee;
+}
+
+#coord_table tbody tr:hover {
+  background-color: #f5f5f5;
+} */
+
+/* dialogタグがモーダルとして開かれたときのスタイル */
+dialog:modal {
+  position: fixed;
+  inset: 0;              /* 上下左右の隙間をなくして画面全体を基準にする */
+  margin: auto;          /* marginをautoにすることで、flexを使わなくても完全な中央に配置される */
+  width: 80%;
+  max-width: 800px;
+  height: 80vh;
+  background-color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  
+  /* 表示時のアニメーション */
+  animation: fadeIn 0.3s ease;
+}
+
+
+/* モーダルの背景（backdrop）のスタイリング */
+dialog:modal::backdrop {
+  background-color: rgba(0, 0, 0, 0.5);
+  animation: fadeInBackdrop 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -45%);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
+
+@keyframes fadeInBackdrop {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* 不要になった .hidden, .active は削除して構いません */
+
+#model_select_box {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+#model_select {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  width: 100%;
+  height: calc(100% - 40px);
+  background-color: #fff;
+  padding: 10px;
+  gap: 10px;
+  overflow-y: auto;
+  box-sizing: border-box;
+}
+
+.model-item {
+  width: 100%;
+  aspect-ratio: 1/1;
+  border: 1px solid black;
+  border-radius: 4px;
+  text-align: center;
+  cursor: pointer;
+  object-fit: cover;
+}
+
+#closebutton {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 40px;
+  height: 40px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  background-color: #ccc;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#closebutton:hover {
+  background: #333;
+  border-color: #333;
+  color: #FFF;
+}
